@@ -1,0 +1,4 @@
+explicit module Private.Qianqian {
+    private header "../Services/Qianqian/QianqianDecrypt.h"
+    export *
+}
