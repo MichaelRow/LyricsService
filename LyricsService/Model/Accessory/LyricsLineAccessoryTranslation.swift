@@ -32,8 +32,8 @@ public class LyricsLineAccessoryTranslation: LyricsLineAccessoryable {
     }
 }
 
-extension LyricsLineAccessoryTranslation: LyricsDictionaryPresentable {
-    public var dictionaryValue: [String : Encodable] {
-        return [ "value" : value ]
+extension LyricsLineAccessoryTranslation: LyricsJSONPresentable {
+    public var codableValue: JSONEncodable {
+        return [ "value" : value ] as [String : JSONEncodable]
     }
 }

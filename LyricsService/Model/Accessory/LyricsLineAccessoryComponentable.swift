@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class LyricsLineAccessoryComponentable: LyricsLineAccessoryable, LyricsDictionaryPresentable {
+public class LyricsLineAccessoryComponentable: LyricsLineAccessoryable, LyricsJSONPresentable {
     
     public var components: [LyricsLineAccessoryComponent]
     
@@ -31,11 +31,11 @@ public class LyricsLineAccessoryComponentable: LyricsLineAccessoryable, LyricsDi
         self.type = type
     }
     
-    public var dictionaryValue: [String : Encodable] {
+    public var codableValue: JSONEncodable {
         let description = components.reduce("") {
             $0 + String(format: "(%d,%d,%.0f,%.0f)%@",$1.rangeInLine.location,$1.rangeInLine.length,$1.begin*1000,$1.duration*1000,$1.value)
         }
-        return [ "value" : description ]
+        return [ "value" : description ] as [String : JSONEncodable]
     }
 }
 
@@ -49,11 +49,11 @@ public class LyricsLineAccessoryKaraoke: LyricsLineAccessoryComponentable {
         return components.reduce("") { $0 + $1.value }
     }
     
-    override public var dictionaryValue: [String : Encodable] {
+    override public var codableValue: JSONEncodable {
         let description = components.reduce("") {
             $0 + String(format: "(%d,%d,%.0f,%.0f)",$1.rangeInLine.location,$1.rangeInLine.length,$1.begin*1000,$1.duration*1000)
         }
-        return [ "value" : description ]
+        return [ "value" : description ] as [String : JSONEncodable]
     }
 }
 

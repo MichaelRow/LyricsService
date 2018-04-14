@@ -28,6 +28,7 @@
 		76CDC8921F8618B40049E437 /* OpenCCSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 88BE89C01F6D720700B230D5 /* OpenCCSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76EDDDE71F87CD6D0056C1ED /* ConcurrentableLyricsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDDDE61F87CD6D0056C1ED /* ConcurrentableLyricsSource.swift */; };
 		881D48B61F91A4E300D86745 /* LyricsLineAccessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D48B51F91A4E300D86745 /* LyricsLineAccessory.swift */; };
+		882A8F8C2081D59E0082AF1C /* JSONEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882A8F8B2081D59E0082AF1C /* JSONEncodable.swift */; };
 		882CAB161FA626A5004A0D08 /* LrcMerger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882CAB151FA626A5004A0D08 /* LrcMerger.swift */; };
 		882CAB181FA62BA5004A0D08 /* LrcFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882CAB171FA62BA5004A0D08 /* LrcFilter.swift */; };
 		882CAB1B1FA62CAA004A0D08 /* FiterList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 882CAB1A1FA62CAA004A0D08 /* FiterList.plist */; };
@@ -117,6 +118,7 @@
 		76CDC8741F8612D90049E437 /* LyricsServiceDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LyricsServiceDemo.entitlements; sourceTree = "<group>"; };
 		76EDDDE61F87CD6D0056C1ED /* ConcurrentableLyricsSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentableLyricsSource.swift; sourceTree = "<group>"; };
 		881D48B51F91A4E300D86745 /* LyricsLineAccessory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricsLineAccessory.swift; sourceTree = "<group>"; };
+		882A8F8B2081D59E0082AF1C /* JSONEncodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncodable.swift; sourceTree = "<group>"; };
 		882CAB151FA626A5004A0D08 /* LrcMerger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LrcMerger.swift; sourceTree = "<group>"; };
 		882CAB171FA62BA5004A0D08 /* LrcFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LrcFilter.swift; sourceTree = "<group>"; };
 		882CAB1A1FA62CAA004A0D08 /* FiterList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FiterList.plist; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 			children = (
 				88A917EC1F937CC3002428B3 /* Accessory */,
 				882CAB191FA62BF7004A0D08 /* Utilities */,
+				882A8F8B2081D59E0082AF1C /* JSONEncodable.swift */,
 				88BE896E1F6D6DA200B230D5 /* Lyrics.swift */,
 				88BE89701F6D6DA300B230D5 /* LyricsLine.swift */,
 				88BE896F1F6D6DA200B230D5 /* MetaData.swift */,
@@ -492,7 +495,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Michael Row";
 				TargetAttributes = {
 					76CDC8691F8612D90049E437 = {
@@ -586,6 +589,7 @@
 				88BE89A51F6D6F3400B230D5 /* XiamiWebLyrics.swift in Sources */,
 				88BE89A61F6D6F3400B230D5 /* XiamiXMLParser.swift in Sources */,
 				76B8FC371F8885FB009A228B /* KrcDecoder.swift in Sources */,
+				882A8F8C2081D59E0082AF1C /* JSONEncodable.swift in Sources */,
 				885492501F6E137F00B79D8B /* String+Custom.swift in Sources */,
 				88CC49C11F7797F1003D9020 /* WebLyricsList.swift in Sources */,
 				88BE89BB1F6D6F6400B230D5 /* MetaData.swift in Sources */,
@@ -694,6 +698,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -701,6 +706,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -735,6 +741,7 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -754,6 +761,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -761,6 +769,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -787,6 +796,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -796,7 +806,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -825,7 +835,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;

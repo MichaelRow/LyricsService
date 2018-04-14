@@ -8,8 +8,8 @@
 
 import Cocoa
 
-public protocol LyricsDictionaryPresentable {
-    var dictionaryValue: [String : Encodable] { get }
+public protocol LyricsJSONPresentable {
+    var codableValue: JSONEncodable { get }
 }
 
 public class Lyrics {
@@ -67,7 +67,7 @@ public class Lyrics {
     }
     
     public var JSONValue: String? {
-        guard let data = try? JSONSerialization.data(withJSONObject: dictionaryValue, options: []) else { return nil }
+        guard let data = try? JSONSerialization.data(withJSONObject: codableValue, options: []) else { return nil }
         return String(data: data, encoding: .utf8)
     }
     
@@ -82,10 +82,12 @@ public class Lyrics {
     }
 }
 
-extension Lyrics: LyricsDictionaryPresentable {
+extension Lyrics: LyricsJSONPresentable {
     
-    public var dictionaryValue: [String : Encodable] {
-        return [ "lines" : lines.map { $0.dictionaryValue },
-                 "metaData" : metaData.dictionaryValue ]
+    public var codableValue: JSONEncodable {
+        let codableLines = lines.map { $0.codableValue }
+        let codableValue = [ "lines" : codableLines,
+                             "metaData" : metaData.codableValue ]
+        return codableValue
     }
 }

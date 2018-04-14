@@ -33,12 +33,12 @@ public class LyricsLine {
     }
 }
 
-extension LyricsLine: LyricsDictionaryPresentable {
+extension LyricsLine: LyricsJSONPresentable {
     
-    public var dictionaryValue: [String : Encodable] {
-        return [ "accessory" : accessory.dictionaryValue,
+    public var codableValue: JSONEncodable {
+        return [ "accessory" : accessory.codableValue,
                  "value" : value,
                  "begin" : Int(begin*1000),
-                 "duration" : Int(duration*1000)]
+                 "duration" : Int(duration*1000)] as [String : JSONEncodable]
     }
 }

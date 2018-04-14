@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol LyricsLineAccessoryable: LyricsDictionaryPresentable {
+public protocol LyricsLineAccessoryable: LyricsJSONPresentable {
     var begin: TimeInterval { get }
     var duration: TimeInterval { get }
     var end: TimeInterval { get }
@@ -88,12 +88,12 @@ public class LyricsLineAccessory {
     }
 }
 
-extension LyricsLineAccessory: LyricsDictionaryPresentable {
+extension LyricsLineAccessory: LyricsJSONPresentable {
     
-    public var dictionaryValue: [String : Encodable] {
-        var map = [String : Encodable]()
+    public var codableValue: JSONEncodable {
+        var map = [String : JSONEncodable]()
         values.keys.forEach { type in
-            map[type.rawValue] = values[type]?.dictionaryValue
+            map[type.rawValue] = values[type]?.codableValue
         }
         return map
     }

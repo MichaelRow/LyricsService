@@ -79,6 +79,6 @@ public struct MetaData: Encodable {
     }    
 }
 
-extension MetaData: LyricsDictionaryPresentable {
-    public var dictionaryValue: [String : Encodable] { return allInfo }
+extension MetaData: LyricsJSONPresentable {
+    public var codableValue: JSONEncodable { return allInfo as [String : JSONEncodable] }
 }
