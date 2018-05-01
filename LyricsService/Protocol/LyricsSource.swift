@@ -48,17 +48,20 @@ public enum LyricsSourceInfo: String, RawRepresentable {
 
 public enum LyricsType: String {
     
-    case Lrc = "Lrc"
-    case Krc = "Krc"
-    case NetEase = "NetEase"
+    case lrc
+    case lrcx
+    case krc
+    case netEase
     
     var decoder: LyricsDecoder {
         switch self {
-        case .Lrc:
+        case .lrc:
             return LrcDecoder.shared
-        case .Krc:
+        case .lrcx:
+            return LrcxDecoder.shared
+        case .krc:
             return KrcDecoder.shared
-        case .NetEase:
+        case .netEase:
             return NetEaseJSONLyricsDecoder.shared
         }
     }

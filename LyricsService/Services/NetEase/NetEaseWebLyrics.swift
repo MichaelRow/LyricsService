@@ -35,7 +35,7 @@ class NetEaseWebLyrics {
 
 extension NetEaseWebLyrics: WebLyrics {
     var sourceInfo: LyricsSourceInfo { return .NetEase }
-    var lyricsType: LyricsType { return .NetEase }
+    var lyricsType: LyricsType { return .netEase }
 }
 
 extension NetEaseWebLyrics: DownloadableWebLyrics {

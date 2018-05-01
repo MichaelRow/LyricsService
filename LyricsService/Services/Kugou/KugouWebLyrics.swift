@@ -39,7 +39,7 @@ class KugouWebLyrics {
 
 extension KugouWebLyrics: WebLyrics {
     var sourceInfo: LyricsSourceInfo { return .Kugou }
-    var lyricsType: LyricsType { return .Krc }
+    var lyricsType: LyricsType { return .krc }
 }
 
 extension KugouWebLyrics: DownloadableWebLyrics {

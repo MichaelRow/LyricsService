@@ -29,7 +29,7 @@ class TTPodWebLyrics {
 
 extension TTPodWebLyrics: WebLyrics {
     var sourceInfo: LyricsSourceInfo { return .TTPod }
-    var lyricsType: LyricsType { return .Lrc }
+    var lyricsType: LyricsType { return .lrc }
 }
 
 extension TTPodWebLyrics: NowAvailableWebLyrics {}

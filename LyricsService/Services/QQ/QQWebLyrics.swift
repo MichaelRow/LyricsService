@@ -37,7 +37,7 @@ class QQWebLyrics {
 
 extension QQWebLyrics: WebLyrics {
     var sourceInfo: LyricsSourceInfo { return .QQMusic }
-    var lyricsType: LyricsType { return .Lrc }
+    var lyricsType: LyricsType { return .lrc }
 }
 
 extension QQWebLyrics: DownloadableWebLyrics {

@@ -35,7 +35,7 @@ class XiamiWebLyrics {
 
 extension XiamiWebLyrics: WebLyrics {
     var sourceInfo: LyricsSourceInfo { return .Xiami }
-    var lyricsType: LyricsType { return .Lrc }
+    var lyricsType: LyricsType { return .lrc }
 }
 
 extension XiamiWebLyrics: DownloadableWebLyrics {

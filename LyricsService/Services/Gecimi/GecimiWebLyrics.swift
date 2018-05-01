@@ -31,7 +31,7 @@ class GecimiWebLyrics {
 
 extension GecimiWebLyrics: WebLyrics {
     var sourceInfo: LyricsSourceInfo { return .Gecimi }
-    var lyricsType: LyricsType { return .Lrc }
+    var lyricsType: LyricsType { return .lrc }
 }
 
 extension GecimiWebLyrics: DownloadableWebLyrics {

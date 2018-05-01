@@ -33,7 +33,7 @@ class QianqianWebLyrics {
 }
 
 extension QianqianWebLyrics: WebLyrics {
-    var lyricsType: LyricsType { return .Lrc }
+    var lyricsType: LyricsType { return .lrc }
     var sourceInfo: LyricsSourceInfo { return .Qianqian }
 }
 
