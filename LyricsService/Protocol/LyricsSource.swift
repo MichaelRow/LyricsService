@@ -26,7 +26,7 @@ public enum LyricsSourceInfo: String, RawRepresentable {
     
     case Kugou = "酷狗音乐"
     
-    var supportFeature: Lyrics.Option {
+    public var supportFeature: Lyrics.Option {
         switch self {
         case .NetEase:
             return [.karaoke, .translate]
@@ -53,7 +53,7 @@ public enum LyricsType: String {
     case krc
     case netEase
     
-    var decoder: LyricsDecoder {
+    public var decoder: LyricsDecoder {
         switch self {
         case .lrc:
             return LrcDecoder.shared

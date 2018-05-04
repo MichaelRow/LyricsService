@@ -29,7 +29,7 @@ public class LyricsLineAccessory {
         case karaoke
         case translation(Language)
         
-        var lyricsOption: Lyrics.Option {
+        public var lyricsOption: Lyrics.Option {
             switch self {
             case .romaji:
                 return .romaji
