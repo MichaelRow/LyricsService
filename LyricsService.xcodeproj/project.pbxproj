@@ -69,7 +69,7 @@
 		88BE89B91F6D6F6400B230D5 /* LyricsLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BE89701F6D6DA300B230D5 /* LyricsLine.swift */; };
 		88BE89BB1F6D6F6400B230D5 /* MetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BE896F1F6D6DA200B230D5 /* MetaData.swift */; };
 		88BE89BC1F6D6F6900B230D5 /* Archiver.h in Headers */ = {isa = PBXBuildFile; fileRef = 88BE89601F6D68DF00B230D5 /* Archiver.h */; };
-		88CC49BF1F7797F1003D9020 /* WebLyricesIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC49BC1F7797F1003D9020 /* WebLyricesIterator.swift */; };
+		88CC49BF1F7797F1003D9020 /* ArrayIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC49BC1F7797F1003D9020 /* ArrayIterator.swift */; };
 		88CC49C01F7797F1003D9020 /* DefaultIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC49BD1F7797F1003D9020 /* DefaultIterator.swift */; };
 		88CC49C11F7797F1003D9020 /* WebLyricsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CC49BE1F7797F1003D9020 /* WebLyricsList.swift */; };
 /* End PBXBuildFile section */
@@ -166,7 +166,7 @@
 		88BE89C01F6D720700B230D5 /* OpenCCSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCCSwift.framework; path = Carthage/Build/Mac/OpenCCSwift.framework; sourceTree = "<group>"; };
 		88BE89C11F6D720700B230D5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/Mac/Alamofire.framework; sourceTree = "<group>"; };
 		88CC499E1F77569D003D9020 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/Mac/SwiftyJSON.framework; sourceTree = "<group>"; };
-		88CC49BC1F7797F1003D9020 /* WebLyricesIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebLyricesIterator.swift; sourceTree = "<group>"; };
+		88CC49BC1F7797F1003D9020 /* ArrayIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayIterator.swift; sourceTree = "<group>"; };
 		88CC49BD1F7797F1003D9020 /* DefaultIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultIterator.swift; sourceTree = "<group>"; };
 		88CC49BE1F7797F1003D9020 /* WebLyricsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebLyricsList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -429,7 +429,7 @@
 			isa = PBXGroup;
 			children = (
 				88CC49BD1F7797F1003D9020 /* DefaultIterator.swift */,
-				88CC49BC1F7797F1003D9020 /* WebLyricesIterator.swift */,
+				88CC49BC1F7797F1003D9020 /* ArrayIterator.swift */,
 				88CC49BE1F7797F1003D9020 /* WebLyricsList.swift */,
 			);
 			path = Iterator;
@@ -577,7 +577,7 @@
 				88BE89B91F6D6F6400B230D5 /* LyricsLine.swift in Sources */,
 				76B8FC351F8885FB009A228B /* NetEaseJSONLyricsDecoder.swift in Sources */,
 				88BE899B1F6D6F2B00B230D5 /* SearchInfo.swift in Sources */,
-				88CC49BF1F7797F1003D9020 /* WebLyricesIterator.swift in Sources */,
+				88CC49BF1F7797F1003D9020 /* ArrayIterator.swift in Sources */,
 				88A917F01F9380A0002428B3 /* LyricsLineAccessoryTranslation.swift in Sources */,
 				88BE89B41F6D6F5B00B230D5 /* NetEaseWebLyrics.swift in Sources */,
 				76787A931F89092B003CDBA9 /* LyricsPicker.swift in Sources */,

@@ -33,6 +33,8 @@ public class Lyrics {
     
     //MARK: - Lyrics
     
+    public var defaultIterator: IteratorType
+    
     public var lines: [LyricsLine]
     
     public var metaData: MetaData
@@ -59,6 +61,7 @@ public class Lyrics {
         self.lines = lines
         self.metaData = info
         self.option = option
+        self.defaultIterator = IteratorType(array: lines)
     }
     
     public func merge(lyrics: Lyrics, newOption: Option) {
@@ -80,6 +83,12 @@ public class Lyrics {
         if value.count > 0 { value.removeLast() }
         return value.count > 0 ? value : nil
     }
+}
+
+extension Lyrics: DefaultIterator {
+    
+    public typealias Element = LyricsLine
+    public var iterableContent: [LyricsLine] { return lines }
 }
 
 extension Lyrics: LyricsJSONPresentable {

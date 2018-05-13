@@ -10,57 +10,17 @@ import Cocoa
 
 public class WebLyricsList: DefaultIterator {
     
-    public private(set) var webLyrics: [WebLyrics]
-    
-    /// 默认遍历器
-    public private(set) var defaultIterator: WebLyricesIterator
-    
-    public init(_ webLyrics: [WebLyrics]) {
-        self.webLyrics = webLyrics
-        self.defaultIterator = WebLyricesIterator(webLyrics: webLyrics)
-    }
-    
-    public func resetIterator() {
-        defaultIterator = WebLyricesIterator(webLyrics: webLyrics)
-    }
-}
-
-//MARK: Sequence
-
-extension WebLyricsList: Sequence {
-    
-    public typealias Iterator = WebLyricesIterator
-    
-    public func makeIterator() -> WebLyricsList.Iterator {
-        return WebLyricesIterator(webLyrics: webLyrics)
-    }
-}
-
-//MARK: Collection
-
-extension WebLyricsList: Collection {
-    
     public typealias Element = WebLyrics
     
-    public var startIndex: Int {
-        return 0
-    }
+    public private(set) var webLyrics: [Element]
     
-    public var endIndex: Int {
-        return webLyrics.count - 1
-    }
+    /// 默认遍历器
+    public var defaultIterator: IteratorType
     
-    public subscript(i: Int) -> Element {
-        precondition((0 ..< endIndex).contains(i), "序列越界")
-        return webLyrics[i]
-    }
+    public var iterableContent: [Element] { return webLyrics }
     
-    public func index(after i: Int) -> Int {
-        if i < endIndex {
-            return i + 1
-        } else {
-            return endIndex
-        }
+    public init(_ webLyrics: [Element]) {
+        self.webLyrics = webLyrics
+        self.defaultIterator = IteratorType(array: webLyrics)
     }
 }
-
